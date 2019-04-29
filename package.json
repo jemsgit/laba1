@@ -1,0 +1,17 @@
+{
+  "name": "laba",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "preinstall": "npm i -g local-web-server",
+    "start": "cd src && ws"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "local-web-server": "^2.6.1"
+  }
+}
