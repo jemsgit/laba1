@@ -5,12 +5,7 @@
             if(link) {
                 console.log(link);
                 console.log($)
-                $('content').load('pages/' + link + '.html', function(text, status, jq) {
-                    console.log(status);
-                    if(status === "error") {
-                        $('content').load('/pages/404.html');
-                    }
-                });
+                setContent(link);
                 history.pushState({}, null, link);
                 e.preventDefault();
             }
@@ -18,13 +13,26 @@
         })
     }
 
-    function setHomeContent() {
-        $('content').load('pages/home.html');
+    function setContent(link) {
+        $('content').load('pages/' + link + '.html', function(text, status, jq) {
+            console.log(status);
+            if(status === "error") {
+                $('content').load('/pages/404.html');
+            }
+        });
+    }
+
+    function loadInitialContent(pathname) {
+        pathname = pathname.replace('/', '')
+        if(pathname === '') {
+            pathname = 'home';
+        }
+        setContent(pathname);
     }
 
     $(document).ready(function(){
         setRouting();
-        setHomeContent();
+        loadInitialContent(window.location.pathname);
     })
 
     
