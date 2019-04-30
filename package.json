@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "preinstall": "npm i -g local-web-server",
-    "start": "cd src && ws"
+    "start": "cd src && ws --spa index.html"
   },
   "keywords": [],
   "author": "",

@@ -15,3 +15,70 @@
 .nav-link.dropdown-toggle {
     cursor: pointer;
 }
+
+.main {
+    display: block;
+}
+
+.group-item {
+    display: flex;
+}
+
+.group-item .row {
+    flex-direction: row;
+    flex: 0 0 100%;
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+}
+
+.group-item .content-link {
+    align-items: center;
+    color: black;
+    transition: all 0.3s ease;
+}
+
+.group-item .image {
+    margin-right: 20px;
+    margin-left: 20px;
+    max-height: 200px;
+    overflow: hidden;
+}
+.group-item:nth-child(even) .row {
+    flex-direction: row-reverse;
+    background: #eaeaea;
+}
+
+.group-item .group-image {
+    transition: transform .3s;
+}
+
+.group-item:hover .group-image {
+    filter: contrast(1.2);
+    transform: scale(1.05);
+}
+
+
+/*image gallery*/
+.image-radio {
+	cursor: pointer;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	border: 4px solid transparent;
+	margin-bottom: 0;
+    outline: 0;
+}
+
+.image-radio img {
+    max-width: 300px;
+}
+
+.image-radio input[type="radio"] {
+	display: none;
+}
+
+.image-radio-checked {
+	border-color: #4783B0;
+}
