@@ -1,3 +1,43 @@
+:root {
+    --backg: white;
+    --main-color: black ;
+    --font-size: 16px;
+    --f-w: 300;
+    --m-i-back: #eaeaea;
+}
+
+.night {
+    --backg: black ;
+    --main-color: white ;
+    --font-size: 20px;
+    --f-w: 300;
+    --m-i-back: black;
+}
+
+.spring {
+    --backg: green;
+    --main-color: yellow;
+    --font-size: 20px;
+    --f-w: 300;
+    --m-i-back: black;
+}
+
+.contrast {
+    --backg: black;
+    --main-color: green;
+    --font-size: 20px;
+    --f-w: 600;
+    --m-i-back: black;
+}
+
+body {
+    background-color: var(--backg);
+    color: var(--main-color);
+    font-size: var(--font-size);
+    font-weight: var(--f-w);
+}
+
+
 .main-info {
     padding: 20px;
 }
@@ -47,7 +87,7 @@
 }
 .group-item:nth-child(even) .row {
     flex-direction: row-reverse;
-    background: #eaeaea;
+    background: var(--m-i-back);
 }
 
 .group-item .group-image {
@@ -81,4 +121,38 @@
 
 .image-radio-checked {
 	border-color: #4783B0;
+}
+
+form {
+    margin-left: 20px;
+}
+
+.back-section > div {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.theme-radio {
+    display: block;
+    margin: 10px;
+}
+
+section.related {
+    display: block;
+}
+
+section.related a,
+section.related span {
+    display: block;
+}
+
+section.related span {
+    margin-bottom: 15px;
+    margin-top: 30px;
+    font-weight: 600;
+}
+
+a.back {
+    display: inline-block;
+    margin-bottom: 20px;
 }
