@@ -1,3 +1,15 @@
+/* 
+
+:root - css переменные для темизации 
+    --backg:
+    --main-color
+    --font-size
+    --f-w
+    --m-i-back
+
+при добавлении класов .night .spring .contrast изменяем значения css переменных
+*/ 
+
 :root {
     --backg: white;
     --main-color: black ;
@@ -30,6 +42,9 @@
     --m-i-back: black;
 }
 
+
+/* применяем значение переменных через var */
+
 body {
     background-color: var(--backg);
     color: var(--main-color);
@@ -59,6 +74,8 @@ body {
 .main {
     display: block;
 }
+
+/* используем flexbox для позиционирования плашек на главной странице */
 
 .group-item {
     display: flex;
@@ -90,6 +107,8 @@ body {
     background: var(--m-i-back);
 }
 
+/* увеличиваем картинку и добавляем контраст при наведении на нее */
+
 .group-item .group-image {
     transition: transform .3s;
 }
@@ -100,7 +119,7 @@ body {
 }
 
 
-/*image gallery*/
+/* image gallery - стилизация радио баттонов для формы выбора картинки бекграунда */
 .image-radio {
 	cursor: pointer;
 	box-sizing: border-box;
@@ -155,4 +174,8 @@ section.related span {
 a.back {
     display: inline-block;
     margin-bottom: 20px;
+}
+
+.home-page-content {
+    margin: 20px;
 }
